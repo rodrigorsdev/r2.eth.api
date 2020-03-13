@@ -20,7 +20,11 @@ npm install
 ```sh
 truffle migrate
 ```
-6. Run API on http://localhost:3000/swagger
+6. Run API 
+```sh
+npm run start
+```
+7. Access http://localhost:3000/swagger
 
 ### Run tests
 
