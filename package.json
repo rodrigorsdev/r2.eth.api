@@ -1,0 +1,34 @@
+{
+  "name": "r2.eth.api",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "nodemon ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigorsdev/r2.eth.api.git"
+  },
+  "keywords": [],
+  "author": "Rodrigo Oliveira <rodrigo.soliveira2322@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigorsdev/r2.eth.api/issues"
+  },
+  "homepage": "https://github.com/rodrigorsdev/r2.eth.api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ethers": "^4.0.45",
+    "express": "^4.17.1",
+    "swagger-node-express": "^2.1.3",
+    "swagger-ui-express": "^4.1.3",
+    "truffle-hdwallet-provider": "^1.0.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

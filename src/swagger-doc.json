@@ -1,0 +1,93 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "This is a sample of Ethereum API",
+      "version": "1.0.0",
+      "title": "r2.eth.storage",
+      "contact": {
+        "email": "rodrigo.soliveira2322@gmail.com"
+      },
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "paths": {
+      "/": {
+        "get": {
+          "tags": [
+            "version"
+          ],
+          "description": "get the API version",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "success"
+            }
+          }
+        }
+      },
+      "/storage": {
+        "get": {
+          "tags": [
+            "information"
+          ],
+          "description": "get information from blockchain",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "success"
+            },
+            "500": {
+              "description": "error"
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "information"
+          ],
+          "description": "set information into the blockchain",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "required params to set information into the blockchain",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/SetRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "success"
+            },
+            "500": {
+              "description": "error"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "SetRequest": {
+        "type": "object",
+        "properties": {
+          "privateKey": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
